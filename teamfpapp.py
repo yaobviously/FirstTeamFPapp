@@ -12,9 +12,6 @@ import pickle
 from sklearn.metrics import mean_squared_error, r2_score
 import shap
 
-DATAURL = ('https://github.com/yaobviously/practice/blob/main/TM3.csv?raw=true')
-TM3 = pd.read_csv(DATAURL)
-
 
 st.write("""
 #        Simple Team Fantasy Points App
@@ -58,7 +55,6 @@ rfmodel = pickle.load(open('teamfp.pkl', 'rb'))
 # Use model to predict
 
 predictions = rfmodel.predict(df)
-
 
 
 st.subheader('Prediction')
