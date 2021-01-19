@@ -19,22 +19,22 @@ TM3 = pd.read_csv(DATAURL)
 st.write("""
 #        Simple Team Fantasy Points App
          
-This app will predict a team's expected fantasy points from Vegas Points and Closing Line'
+This app will predict a team's expected fantasy points'
 """)
 
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
     
-    vegas_total = st.sidebar.slider('Team Vegas', 95, 125, 110), 
-    closing_spread = st.sidebar.slider('Closing Line', -18, 18, 2),
-    TeamRB = st.sidebar.slider('Team Reb/100', 36, 52, 44),
-    TeamAST = st.sidebar.slider('Team AST/100', 18, 28, 24),
-    TeamSTL = st.sidebar.slider('Team STL/100', 6, 18, 12), 
-    TeamBLK = st.sidebar.slider('Team BLK/100', 5, 18, 9),
-    oppAST = st.sidebar.slider('Opponent AST/100 Allowed', 18, 28, 24),
-    oppREB = st.sidebar.slider('Opponent REB/100 Allowed', 36, 52, 44),
-    oppBLK = st.sidebar.slider('Opponent BLK/100 Allowed', 5, 18, 9)
+    vegas_total = st.sidebar.slider('Team Vegas', 95.0, 125.0, 110.0), 
+    closing_spread = st.sidebar.slider('Closing Line', -18, 18, 1),
+    TeamRB = st.sidebar.slider('Team Reb/100', 36, 54, 45),
+    TeamAST = st.sidebar.slider('Team AST/100', 18, 32, 25),
+    TeamSTL = st.sidebar.slider('Team STL/100', 4, 12, 6), 
+    TeamBLK = st.sidebar.slider('Team BLK/100', 2, 10, 5),
+    oppAST = st.sidebar.slider('Opponent AST/100 Allowed', 18, 32, 25),
+    oppREB = st.sidebar.slider('Opponent REB/100 Allowed', 36, 54, 45),
+    oppBLK = st.sidebar.slider('Opponent BLK/100 Allowed', 2, 10, 5)
     
     data = {'TeamVegas' : vegas_total,
             'ClosingSpread' : closing_spread,
