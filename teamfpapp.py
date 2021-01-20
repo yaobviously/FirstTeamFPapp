@@ -7,9 +7,10 @@ Created on Mon Jan 18 15:15:19 2021
 import pandas as pd
 import numpy as np
 import streamlit as st
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 import pickle
 from sklearn.metrics import mean_squared_error, r2_score
+import shap
 
 
 st.write("""
@@ -22,7 +23,7 @@ st.sidebar.header('User Input Parameters')
 
 def user_input_features():
     
-    vegas_total = st.sidebar.slider('Team Vegas', 95, 125, 110), 
+    vegas_total = st.sidebar.slider('Team Vegas', 95.0, 125.0, 110.0), 
     closing_spread = st.sidebar.slider('Closing Line', -18, 18, 1),
     TeamRB = st.sidebar.slider('Team Reb/100', 36, 54, 45),
     TeamAST = st.sidebar.slider('Team AST/100', 18, 32, 25),
@@ -53,7 +54,7 @@ rfmodel = pickle.load(open('teamfp.pkl', 'rb'))
 
 # Use model to predict
 
-predictions = (rfmodel.predict(df)).round(1)
+predictions = rfmodel.predict(df)
 
 
 st.subheader('Prediction')
