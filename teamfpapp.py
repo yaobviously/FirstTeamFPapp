@@ -53,7 +53,7 @@ rfmodel = pickle.load(open('teamfp.pkl', 'rb'))
 
 # Use model to predict
 
-predictions = rfmodel.predict(df)
+predictions = (rfmodel.predict(df)).round(1)
 
 
 st.subheader('Prediction')
