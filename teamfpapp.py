@@ -10,7 +10,6 @@ import streamlit as st
 from sklearn.linear_model import LinearRegression
 import pickle
 from sklearn.metrics import mean_squared_error, r2_score
-import shap
 
 
 st.write("""
@@ -50,11 +49,11 @@ df = user_input_features()
 
 # Load the RandomForestRegressor model
 
-rfmodel = pickle.load(open('teamfp.pkl', 'rb'))
+lmodel = pickle.load(open('teamfp.pkl', 'rb'))
 
 # Use model to predict
 
-predictions = rfmodel.predict(df)
+predictions = lmodel.predict(df)
 
 
 st.subheader('Prediction')
