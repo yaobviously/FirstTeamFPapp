@@ -22,7 +22,7 @@ st.sidebar.header('User Input Parameters')
 
 def user_input_features():
     
-    vegas_total = st.sidebar.slider('Team Vegas', 95.0, 125.0, 110.0), 
+    vegas_total = st.sidebar.slider('Team Vegas', 95, 125, 110), 
     closing_spread = st.sidebar.slider('Closing Line', -18, 18, 1),
     TeamRB = st.sidebar.slider('Team Reb/100', 36, 54, 45),
     TeamAST = st.sidebar.slider('Team AST/100', 18, 32, 25),
