@@ -10,7 +10,6 @@ import streamlit as st
 from sklearn.ensemble import RandomForestRegressor
 import pickle
 from sklearn.metrics import mean_squared_error, r2_score
-import shap
 
 
 st.write("""
