@@ -54,7 +54,7 @@ lmodel = pickle.load(open('teamfp.pkl', 'rb'))
 # Use model to predict
 
 predictions = lmodel.predict(df)
-predictions = predictions.rename(columns={'0':'Points'})
+
 
 
 st.subheader('Prediction')
