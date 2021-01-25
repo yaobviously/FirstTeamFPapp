@@ -15,7 +15,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 st.write("""
 #        Simple Team Fantasy Points App
          
-This app will predict a team's expected fantasy points'
+This app predicts a team's expected fantasy points using a simple model
 """)
 
 st.sidebar.header('User Input Parameters')
