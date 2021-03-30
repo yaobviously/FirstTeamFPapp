@@ -1,1 +1,2 @@
-This is a simple app for calculating expected team fantasy points 
+The simple app allows you to see the predicted Team Fantasy Points using a simple Linear Regression model with 5 features.
+
